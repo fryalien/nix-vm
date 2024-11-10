@@ -77,7 +77,7 @@
     nwg-look
     # Setup QT themes
     libsForQt5.qt5ct
-	libsForQt5.qtstyleplugin-kvantum
+	  libsForQt5.qtstyleplugin-kvantum
     kdePackages.qt6ct
     themechanger
     #kdePackages.qtstyleplugin-kvantum

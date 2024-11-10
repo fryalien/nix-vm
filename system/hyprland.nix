@@ -72,16 +72,12 @@
     nwg-look
     # Setup QT themes
     libsForQt5.qt5ct
+    libsForQt5.qtstyleplugin-kvantum
     kdePackages.qt6ct
     themechanger
-    kdePackages.qtstyleplugin-kvantum
-    # QT stuff
+    #kdePackages.qtstyleplugin-kvantum
     qt5.qtwayland
     qt6.qtwayland
-    # Monitor stuff
-    wlr-randr
-    # Font manager
-    font-manager
     # XDG portal
     xdg-desktop-portal-hyprland
   ];
