@@ -74,6 +74,7 @@
       xterm
       vscodium
       chromium
+      librewolf
       git
       vlc
       p7zip
@@ -98,6 +99,7 @@
 
   # List packages installed in system profile.
   environment.systemPackages = with pkgs; [
+
     # GTK THEMES
     magnetic-catppuccin-gtk
 
@@ -112,7 +114,6 @@
     kdePackages.kcolorchooser
     kdePackages.kolourpaint
     kdePackages.tokodon
-    #kdePackages.plasma-firewall
     catppuccin-kde
   ];
 
@@ -122,9 +123,9 @@
   # Enable the firewall.
   networking.firewall.enable = true;
 
-  # Open ports in the firewall (localsend, syncthing).
-  networking.firewall.allowedTCPPorts = [ 53317 8384 ];
-  networking.firewall.allowedUDPPorts = [ 53317 8384 ];
+  # Open ports in the firewall (localsend).
+  networking.firewall.allowedTCPPorts = [ 53317 ];
+  networking.firewall.allowedUDPPorts = [ 53317 ];
 
   # Installation ISO.
   system.stateVersion = "24.05";
