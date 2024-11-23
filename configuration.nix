@@ -1,10 +1,7 @@
 { inputs, config, pkgs, ... }:
 
 {
-  imports =
-    [
-      ./hardware.nix
-    ];
+  imports = [ ./hardware.nix ];
 
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
