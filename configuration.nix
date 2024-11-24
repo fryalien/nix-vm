@@ -64,7 +64,6 @@
     isNormalUser = true;
     description = "y";
     extraGroups = [ "networkmanager" "wheel" "libvirtd" ];
-    shell = pkgs.fish;
     packages = with pkgs; [
       micro
       neovim
@@ -136,6 +135,14 @@
 
   # Enable fish.
   programs.fish.enable = true;
+  users.defaultUserShell = pkgs.fish;
+
+  # Fonts.
+  fonts.packages = with pkgs; [
+    (nerdfonts.override { fonts = [ "FiraCode" "DroidSansMono" "Hack" "Ubuntu"]; })
+    ubuntu_font_family
+    font-awesome
+  ];
 
   # Enable VirtualBox guest
   virtualisation.virtualbox.guest.enable = true;
