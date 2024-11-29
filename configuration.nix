@@ -46,9 +46,6 @@
     LC_TIME = "en_US.UTF-8";
   };
 
-  # Enable CUPS to print documents.
-  services.printing.enable = true;
-
   # Enable sound with pipewire.
   hardware.pulseaudio.enable = false;
   security.rtkit.enable = true;
@@ -63,7 +60,7 @@
   users.users.y = {
     isNormalUser = true;
     description = "y";
-    extraGroups = [ "networkmanager" "wheel" "libvirtd" ];
+    extraGroups = [ "networkmanager" "wheel" ];
     packages = with pkgs; [
       micro
       neovim
@@ -75,7 +72,6 @@
       vlc
       p7zip
       archiver
-      wireshark
       obsidian
       fzf
       bat
